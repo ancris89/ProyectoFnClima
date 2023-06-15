@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Consulta de Clima</title>
+    <style>
+        table{
+            border-collapse: collapse;
+           
+        }
+        th,td{
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+            background-color: orange;
+            
+        }
+        .tablas{
+            height: 50%;
+            width: 50%;
+            padding-left: 20px;
+        }
+        h1{
+            padding-left: 20px;
+            color: blue;
+        }
+        .uno{
+            padding-left: 20px;
+        }
+      
+    </style>
+</head>
+<body>
+    <h1>Consulta de Clima</h1>
+    <div class="uno">
+        <label for="ciudad">Ciudad:</label>
+    </div>
+    <div class="uno">
+        <input type="text" id="ciudad">
+        <button type="button" class="btn btn-success" onclick="consultarClima()">Consultar</button>
+        
+    </div>
+
+    <div class="uno">
+        <label for="ciudades">Ciudades:</label>
+    </div>
+    <div class="uno">
+        <input type="text" id="ciudades" value="London,Paris,Berlin">
+        <button type="button" class="btn btn-success" onclick="consultarClimas()">Consultar</button>
+    </div>
+    <br><br>
+
+    <div class="uno">
+        <button type="button" class="btn btn-success" onclick="limpiarTabla()">Limpiar</button>
+        
+    </div>
+    <br><br>
+
+    <div class="tablas">
+        <table id="tabla-clima" class="table table-bordered table-striped" >
+            <thead >
+                <tr>
+                    <th>Ciudad</th>
+                    <th>Temperatura</th>
+                    <th>Descripcion</th>
+                    <th>Presion(mbar)</th>
+                    <th>Humedad(&#37;)</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
